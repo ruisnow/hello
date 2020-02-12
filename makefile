@@ -1,9 +1,15 @@
 
 CC = g++
 
-helloworld: helloworld.c
-	$(CC) helloworld.c -o helloworld
+helloworld: helloworld.o
+	$(CC)  -o $@ $^
+
+helloworld.o: helloworld.cpp
+	$(CC) -c $^ -o $@
 
 clean:
-	rm helloworld
+	rm *.o
+
+test:
+	test "echo yes"
 

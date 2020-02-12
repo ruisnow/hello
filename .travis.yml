@@ -1,0 +1,5 @@
+lanuage: c++
+script:
+    - make
+    - make test
+    
