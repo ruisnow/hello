@@ -9,8 +9,9 @@ helloworld: $(objects)
 $(objects): helloworld.cpp
 	$(CC) -c $^ -o $@
 
+.PHONY : clean
 clean:
-	rm $(objects)
+	-rm $(objects)
 
 test:
 	test "echo yes"
