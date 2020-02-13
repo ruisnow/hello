@@ -1,14 +1,16 @@
 
 CC = g++
+objects = helloworld.o
 
-helloworld: helloworld.o
+
+helloworld: $(objects)
 	$(CC)  -o $@ $^
 
-helloworld.o: helloworld.cpp
+$(objects): helloworld.cpp
 	$(CC) -c $^ -o $@
 
 clean:
-	rm *.o
+	rm $(objects)
 
 test:
 	test "echo yes"
