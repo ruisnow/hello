@@ -2,10 +2,18 @@
 #include <fstream>
 #include<cstring>
 
+#define CREAT_STRING(key) string key;
+#define SET_SRTING(key,value) key = value;
+
 int  main(int argc, char *argv[]){
 
     using namespace std;
-    string st("Hello World!");
+    
+    CREAT_STRING(hello);
+    SET_SRTING(hello,"hello,world!--this is marco define")
+    string st(hello);
+    
+    //string st("Hello World!");
 
     cout << "hello world" << endl;
     cout << st << endl;   
