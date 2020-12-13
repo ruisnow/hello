@@ -1,16 +1,15 @@
 #include <iostream>
 #include <fstream>
-#include<cstring>
+#include <cstring>
 
 #define CREAT_STRING(key) string key;
-#define SET_SRTING(key,value) key = value;
+#define SET_STRING(key,value) key = value;
+using namespace std;
 
 int  main(int argc, char *argv[]){
 
-    using namespace std;
-    
     CREAT_STRING(hello);
-    SET_SRTING(hello,"hello,world!--this is marco define")
+    SET_STRING(hello,"hello,world!--this is marco define")
     string st(hello);
     
     //string st("Hello World!");
@@ -38,10 +37,6 @@ int  main(int argc, char *argv[]){
 
     cout << "Done\n";
     fin.close();
-
-
-
-
 
     return 0;
 }
